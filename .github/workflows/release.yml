@@ -2,7 +2,8 @@ name: Release
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
+    types: closed
     tags:
       - 'v*'
 

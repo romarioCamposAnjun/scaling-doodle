@@ -2,12 +2,16 @@ name: Release
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
+    inputs:
+      version:
+        description: 'Release version (e.g. v0.1.0)'
+        required: true
+      message:
+        description: 'Tag message'
+        required: true
+
 jobs:
   build:
-    name: Create Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -28,3 +32,9 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
+      - name: Checkout release tag
+        uses: actions/checkout@v2
+        with:
+          version: ${{ github.event.inputs.version }}
+          message: ${{ github.event.inputs.message }}
+          token: ${{ secrets.GITHUB_TOKEN }}

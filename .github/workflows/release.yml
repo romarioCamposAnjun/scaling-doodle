@@ -2,31 +2,17 @@ name: Release
 
 on:
   workflow_dispatch:
-  pull_request:
-    types: closed
+  push:
     tags:
       - 'v*'
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged && startsWith(github.head_ref, 'RC')
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
-      - name: Tag and prepare release
-        id: tag_and_prepare_release
-        uses: K-Phoen/semver-release-action@v1.3.1
-        with:
-          release_branch: master
-          release_strategy: tag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload release notes
-        if: steps.tag_and_prepare_release.outputs.tag
+      - name: Create GitHub release
         uses: Roang-zero1/github-create-release-action@v3
         with:
-          created_tag: ${{ steps.tag_and_prepare_release.outputs.tag }}
+          version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

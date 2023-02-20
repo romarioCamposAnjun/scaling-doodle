@@ -1,6 +1,6 @@
 # scaling-doodle
 > Branches
-[![NPM version][npm-image]][npm-url]
+> [![NPM version][npm-image]][npm-url]
 
 - **Checklists:** Renders GitHub-style checklists.
    ```

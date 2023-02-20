@@ -3,7 +3,7 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
-      version:
+      tag_name:
         description: 'Release version (e.g. v0.1.0)'
         required: true
       message:
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout release tag
         uses: actions/checkout@v2
         with:
-          version: ${{ github.event.inputs.version }}
+          version: ${{ github.event.inputs.tag_name }}
           message: ${{ github.event.inputs.message }}
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Release
@@ -30,6 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
             - First Change

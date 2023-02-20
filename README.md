@@ -1,13 +1,9 @@
 # scaling-doodle
 
-First Test
-===============
+> First Test
 
 Second Test
-===============
 
 Third Test
-===============
 
 Fourth Test
-===============

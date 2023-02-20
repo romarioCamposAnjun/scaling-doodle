@@ -13,6 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@main
       - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -23,4 +25,4 @@ jobs:
             - First Change
             - Second Change
           draft: true
-          prerelease: true
+          prerelease: false

@@ -11,10 +11,10 @@ on:
         required: true
 
 jobs:
-  build:
+  tagged-release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    #permissions:
+      #contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@main
@@ -24,16 +24,6 @@ jobs:
           version: ${{ github.event.inputs.tag_name }}
           message: ${{ github.event.inputs.message }}
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: "Build & test" # Try to create a new release
-        run: |
-          echo "done!"
-
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

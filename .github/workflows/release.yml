@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@main
       - name: Checkout release tag
         uses: actions/checkout@v2
-        with:
+        with: # Inputs tag release and description
           version: ${{ github.event.inputs.tag_name }}
           message: ${{ github.event.inputs.message }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -38,3 +38,13 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
+      - name: "Build & test" # Try to create a new release
+        run: |
+          echo "done!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"

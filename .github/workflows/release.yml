@@ -19,7 +19,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@main
       - name: Checkout release tag
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with: # Inputs tag release and description
           version: ${{ github.event.inputs.tag_name }}
           message: ${{ github.event.inputs.message }}

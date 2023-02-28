@@ -16,7 +16,7 @@ git branch
 
 E retornará a branch atual
 
-troque para atualizar a branch principal, com o comando:
+mude para atualizar a branch principal, com o comando:
 
 ```bash 
 git checkout main
@@ -26,7 +26,7 @@ git checkout main
 git pull
 ```
 
-### Troque para a branch de desenvolvimento e a atualize, com o comando:
+### Mude para a branch de desenvolvimento e a atualize, com o comando:
 ```bash
 git checkout dev
 ```

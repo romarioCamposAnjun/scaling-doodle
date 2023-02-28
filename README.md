@@ -27,17 +27,31 @@ git pull
 ```
 
 ### Mude para a branch de desenvolvimento, com o comando:
-
+```bash
 git checkout dev
+```
 
 ### Crie sua branch de acordo com sua tarefa
 
-Ex: git checkout -b feat/seunome/suatarefa
+Ex:
+```bash
+git checkout -b feat/seunome/suatarefa
+```
 
 ### Finalizado a tarefa
 
+```bash
 git add .
+```
+```bash
 git commit -m "feat: Descrição de sua tarefa"
+```
+```bash
 git checkout dev
+```
+```bash
 git merge feat/seunome/suatarefa
+```
+```bash
 git push origin dev
+```

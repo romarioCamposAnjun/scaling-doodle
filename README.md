@@ -18,7 +18,7 @@ E retornará a branch atual
 
 mude para atualizar a branch principal, com o comando:
 
-```bash 
+```bash
 git checkout main
 ```
 

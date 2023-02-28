@@ -17,9 +17,12 @@ git branch
 E retornará a branch atual
 
 mude para atualizar a branch, com o comando:
-
+```bash
 git checkout main
+```
+```bash
 git pull
+```
 
 ### Mude para a branch de desenvolvimento, com o comando:
 

@@ -4,7 +4,7 @@ feat: São adições de novas funcionalidades ou de quaisquer outras novas impla
 
 fix: Para definir o tratamento de correções de bugs.
 
-chore: Atualização de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas que realmente não entram em produção.
+chore: Atualizações de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas.
 
 ### Rotinas de passos
 

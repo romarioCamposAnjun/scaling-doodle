@@ -1,2 +1,1 @@
-# vmd
-![NPM version][npm-image]
+# Here's a Heading

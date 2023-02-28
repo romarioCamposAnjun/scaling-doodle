@@ -6,6 +6,8 @@ fix: Para definir o tratamento de correções de bugs.
 
 chore: Atualizações de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas.
 
+refactor: Utilizado em quaisquer mudanças no código, porém não alterem a funcionalidade final da tarefa impactada.
+
 ### Rotinas de passos
 
 Se o terminal não indicar qual branch você está, digite esse comando:

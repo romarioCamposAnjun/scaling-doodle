@@ -16,7 +16,7 @@ git branch
 
 E retornará a branch atual
 
-mude para atualizar a branch, com o comando:
+mude para atualizar a branch principal, com o comando:
 
 ```bash 
 git checkout main
@@ -26,9 +26,12 @@ git checkout main
 git pull
 ```
 
-### Mude para a branch de desenvolvimento, com o comando:
+### Mude para a branch de desenvolvimento e a atualize, com o comando:
 ```bash
 git checkout dev
+```
+```bash
+git pull
 ```
 
 ### Crie sua branch de acordo com sua tarefa

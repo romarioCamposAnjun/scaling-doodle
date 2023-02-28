@@ -44,7 +44,7 @@ git checkout -b feat/seunome/suatarefa
 git add .
 ```
 ```bash
-git commit -m "feat: Descrição de sua tarefa"
+git commit -m "[feat]: Descrição de sua tarefa"
 ```
 ```bash
 git checkout dev

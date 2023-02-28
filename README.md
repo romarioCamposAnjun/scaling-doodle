@@ -1,3 +1,5 @@
-### Example
+### Commits Semânticos
 
-The full name Jane Smith is broken into first name Jane and last name Smith.
+[feat]: Tratam adições de novas funcionalidades ou de quaisquer outras novas implantações ao código;
+[fix]: Essencialmente definem o tratamento de correções de bugs;
+[chore]: Atualização de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas que realmente não entram em produção;

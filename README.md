@@ -10,7 +10,9 @@ chore: Atualização de tarefas que não ocasionam alteração no código de pro
 
 Se o terminal não indicar qual branch você está, digite esse comando:
 
+```bash
 git branch
+```
 
 E retornará a branch atual
 

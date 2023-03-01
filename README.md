@@ -1,4 +1,4 @@
-### Padrões de commit semanticos que devem ser seguidos
+### Padrões de commit semanticos seguidos pela equipe
 
 feat: São adições de novas funcionalidades ou de quaisquer outras novas implantações ao código.
 

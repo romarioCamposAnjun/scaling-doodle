@@ -38,7 +38,7 @@ git pull
 
 ### Crie sua branch de acordo com sua tarefa
 
-Exemplo:
+Exemplo de uma tarefa que será feita como feat:
 ```bash
 git checkout -b feat/seunome/suatarefa
 ```

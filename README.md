@@ -10,7 +10,7 @@ refactor: Utilizado em quaisquer mudanças no código, porém não alterem a fun
 
 ### Rotinas de passos
 
-Se o terminal não indicar qual branch você está, digite esse comando:
+Se o terminal não indicar qual branch você está, digite o comando:
 
 ```bash
 git branch

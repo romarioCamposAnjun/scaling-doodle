@@ -8,7 +8,7 @@ chore: Atualizações de tarefas que não ocasionam alteração no código de pr
 
 refactor: Utilizado em quaisquer mudanças no código, porém não alterem a funcionalidade final da tarefa impactada.
 
-### Etapas para DevOps
+# Etapas para DevOps
 
 Se o terminal não indicar qual branch você está, digite o comando:
 

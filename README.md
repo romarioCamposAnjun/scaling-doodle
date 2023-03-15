@@ -56,6 +56,9 @@ git commit -m "[feat]: Descrição de sua tarefa"
 git checkout dev
 ```
 ```bash
+git pull
+```
+```bash
 git merge feat/seunome/suatarefa
 ```
 ```bash

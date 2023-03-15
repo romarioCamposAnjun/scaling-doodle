@@ -38,6 +38,14 @@ git checkout -b feat/seunome/suatarefa
 
 ### Finalizado a tarefa
 
+Verifique qual arquivos precisam ser atualizados, com o seguinte comando:
+
+```bash
+git status
+```
+
+Verificado os arquivos ou diretorios que precisam ser atualizados, dê sequencia aos proximos comandos:
+
 ```bash
 git add .
 ```

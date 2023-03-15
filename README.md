@@ -38,11 +38,24 @@ git checkout -b feat/seunome/suatarefa
 
 ### Finalizado a tarefa
 
+Num caso especifico, onde se necessita modificar apenas um terminado arquivo, digite tal comando como exemplo:
+
+```bash
+git status 
+```
+
+Ira trazer o arquivo necessita modificacao e digite o comando:
+
+```bash
+git add 'seu arquivo modificado' 
+```
+
 Verifique qual arquivos precisam ser atualizados, com o seguinte comando:
 
 ```bash
 git status
 ```
+# Em caso comum, siga essas etapas
 
 Verificado os arquivos ou diretorios que precisam ser atualizados, dê sequencia aos proximos comandos:
 

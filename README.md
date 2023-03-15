@@ -8,7 +8,7 @@ chore: Atualizações de tarefas que não ocasionam alteração no código de pr
 
 refactor: Utilizado em quaisquer mudanças no código, porém não alterem a funcionalidade final da tarefa impactada.
 
-# Passos entre branch e commit
+# Etapas entre branch e commit
 
 Se o terminal não indicar qual branch você está, digite o comando:
 
@@ -19,9 +19,11 @@ git branch
 E retornará a branch atual
 
 ### Mude para a branch de desenvolvimento e a atualize, com o comando:
+
 ```bash
 git checkout dev
 ```
+
 ```bash
 git pull
 ```
@@ -29,6 +31,7 @@ git pull
 ### Crie sua branch de acordo com sua tarefa
 
 Exemplo de uma tarefa que será feita como feat:
+
 ```bash
 git checkout -b feat/seunome/suatarefa
 ```
@@ -38,18 +41,23 @@ git checkout -b feat/seunome/suatarefa
 ```bash
 git add .
 ```
+
 ```bash
 git commit -m "[feat]: Descrição de sua tarefa"
 ```
+
 ```bash
 git checkout dev
 ```
+
 ```bash
 git pull
 ```
+
 ```bash
 git merge feat/seunome/suatarefa
 ```
+
 ```bash
 git push origin dev
 ```

@@ -76,9 +76,5 @@ git pull
 ```
 
 ```bash
-git merge feat/seunome/suatarefa
-```
-
-```bash
-git push origin dev
+git push feat/seunome/suatarefa
 ```

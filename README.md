@@ -8,7 +8,7 @@ chore: Atualizações de tarefas que não ocasionam alteração no código de pr
 
 refactor: Utilizado em quaisquer mudanças no código, porém não alterem a funcionalidade final da tarefa impactada.
 
-# Etapas para DevOps
+# Passos entre branch e commit
 
 Se o terminal não indicar qual branch você está, digite o comando:
 
@@ -17,17 +17,6 @@ git branch
 ```
 
 E retornará a branch atual
-
-mude para atualizar a branch principal, com o comando:
-
-```bash
-git checkout main
-```
-
-```bash
-git pull
-```
-# Etapas para Desenvolvedor
 
 ### Mude para a branch de desenvolvimento e a atualize, com o comando:
 ```bash

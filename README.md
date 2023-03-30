@@ -18,7 +18,19 @@ git branch
 
 E retornará a branch atual
 
-### Mude para a branch de desenvolvimento e a atualize, com o comando:
+# Esse projeto necessita que os ambientes de produção e desenvolvimento estejam paralelamente atualizados
+
+### Primeiramente mude para a branch de produção, com o seguinte comando:
+
+```bash
+git checkout main
+```
+
+```bash
+git pull
+```
+
+### Depois mude para a branch de desenvolvimento, com o seguinte comando:
 
 ```bash
 git checkout dev
@@ -28,7 +40,7 @@ git checkout dev
 git pull
 ```
 
-### Crie sua branch de acordo com sua tarefa
+### Crie sua branch de acordo com sua tarefa, seguindo os padrões de commit semânticos
 
 Exemplo de uma tarefa que será feita como feat:
 
@@ -36,28 +48,7 @@ Exemplo de uma tarefa que será feita como feat:
 git checkout -b feat/seunome/suatarefa
 ```
 
-### Finalizado a tarefa
-
-Num caso especifico, onde se necessita modificar apenas um terminado arquivo, digite tal comando como exemplo:
-
-```bash
-git status 
-```
-
-Ira trazer o arquivo necessita modificacao e digite o comando:
-
-```bash
-git add 'seu arquivo modificado' 
-```
-
-Verifique qual arquivos precisam ser atualizados, com o seguinte comando:
-
-```bash
-git status
-```
-# Em caso comum, siga essas etapas
-
-Verificado os arquivos ou diretorios que precisam ser atualizados, dê sequencia aos proximos comandos:
+### Finalizado a tarefa, siga as sequências
 
 ```bash
 git add .
@@ -66,6 +57,8 @@ git add .
 ```bash
 git commit -m "[feat]: Descrição de sua tarefa"
 ```
+
+### Passe sua tarefa primeiramente para dev
 
 ```bash
 git checkout dev
@@ -81,4 +74,22 @@ git merge feat/seunome/suatarefa
 
 ```bash
 git push origin dev
+```
+
+### Feito isso é precisar deixar a branch de produção paralela com desenvolvimento
+
+```bash
+git checkout main
+```
+
+```bash
+git pull
+```
+
+```bash
+git merge dev
+```
+
+```bash
+git push origin main
 ```

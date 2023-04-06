@@ -2,10 +2,10 @@ name: dev-deploy
 
 on:
   push:
-    branches: [dev]
+    branches: [develop]
 jobs:
   dev-deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, dev, doc-issuer-dev]
     environment: development
     strategy:
       matrix:

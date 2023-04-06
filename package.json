@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start_dev": "pm2 processes.json --env development",
-    "start_prod": "pm2 processes.json --env production"
+    "start_dev": "pm2 ecosystem.config.js --env development",
+    "start_prod": "pm2 ecosystem.config.js --env production"
   },
   "repository": {
     "type": "git",

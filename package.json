@@ -4,7 +4,9 @@
   "description": "feat: São adições de novas funcionalidades ou de quaisquer outras novas implantações ao código.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start_dev": "pm2 processes.json --env development",
+    "start_prod": "pm2 processes.json --env production"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,8 @@ on:
     branches: [dev]
 jobs:
   dev-deploy:
-    runs-on: [self-hosted, dev, doc-issuer-dev]
+    runs-on: [ubuntu-latest,self-hosted,dev]
+    environment: development
     strategy:
       matrix:
         node-version: [lts/*]

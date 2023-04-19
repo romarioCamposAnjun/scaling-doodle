@@ -1,0 +1,21 @@
+name: dev-deploy
+
+on:
+  push:
+    branches: [develop]
+jobs:
+  dev-deploy:
+    runs-on: [self-hosted, dev, doc-issuer-dev]
+    environment: development
+    strategy:
+      matrix:
+        node-version: [lts/*]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: start or reload server
+        run: npm run start_dev

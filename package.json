@@ -1,0 +1,24 @@
+{
+  "name": "scaling-doodle",
+  "version": "1.0.0",
+  "description": "feat: São adições de novas funcionalidades ou de quaisquer outras novas implantações ao código.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start_dev": "pm2 ecosystem.config.js --env development",
+    "start_prod": "pm2 ecosystem.config.js --env production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romarioCamposAnjun/scaling-doodle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romarioCamposAnjun/scaling-doodle/issues"
+  },
+  "homepage": "https://github.com/romarioCamposAnjun/scaling-doodle#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

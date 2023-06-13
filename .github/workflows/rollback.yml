@@ -3,7 +3,7 @@ name: Rollback on Develop
 on:
   push:
     branches:
-      - main
+      - develop
   workflow_dispatch:
     inputs:
       commit_hash:

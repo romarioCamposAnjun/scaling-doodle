@@ -1,0 +1,26 @@
+name: Rollback on Develop
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Rollback
+        run: |
+          # Use a entrada commit_hash para obter o hash do commit desejado
+          COMMIT_HASH=${{ github.event.inputs.commit_hash }}
+          
+          # Reverta para o commit especificado
+          git revert --no-commit $COMMIT_HASH..HEAD
+          git commit -m "Rollback to $COMMIT_HASH"
+
+          # Empurre as alterações revertidas
+          git push origin main

@@ -3,7 +3,12 @@ name: Rollback on Develop
 on:
   push:
     branches:
-      - develop
+      - main
+  workflow_dispatch:
+    inputs:
+      commit_hash:
+        description: 'Número do hash do commit'
+        required: true
 
 jobs:
   rollback:
@@ -15,12 +20,12 @@ jobs:
 
       - name: Rollback
         run: |
-          # Use a entrada commit_hash para obter o hash do commit desejado
+          # Obtém o número do hash do commit fornecido
           COMMIT_HASH=${{ github.event.inputs.commit_hash }}
-          
-          # Reverta para o commit especificado
+
+          # Reverte para o commit especificado
           git revert --no-commit $COMMIT_HASH..HEAD
           git commit -m "Rollback to $COMMIT_HASH"
 
-          # Empurre as alterações revertidas
+          # Empurra as alterações revertidas
           git push origin main

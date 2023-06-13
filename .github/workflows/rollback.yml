@@ -17,15 +17,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: develop
 
       - name: Rollback
         run: |
           # Obtém o número do hash do commit fornecido
           COMMIT_HASH=${{ github.event.inputs.commit_hash }}
 
-          # Reverte para o commit especificado
-          git revert --no-commit $COMMIT_HASH..HEAD
-          git commit -m "Rollback to $COMMIT_HASH"
+          # Reverte para o commit especificado usando git reset
+          git reset --hard $COMMIT_HASH
 
           # Empurra as alterações revertidas
-          git push origin develop
+          git push --force origin develop

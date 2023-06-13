@@ -24,7 +24,7 @@ jobs:
           COMMIT_HASH=${{ github.event.inputs.commit_hash }}
 
           # Reverte para o commit especificado
-          git reset --no-commit $COMMIT_HASH..HEAD
+          git revert --no-commit $COMMIT_HASH..HEAD
           git commit -m "Rollback to $COMMIT_HASH"
 
           # Empurra as alterações revertidas

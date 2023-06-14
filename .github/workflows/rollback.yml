@@ -26,7 +26,7 @@ jobs:
           COMMIT_HASH=${{ github.event.inputs.commit_hash }}
 
           # Reverte para o commit especificado usando git reset
-          git reset --hard $COMMIT_HASH
+          git revert --hard $COMMIT_HASH
 
           # Empurra as alterações revertidas
           git push --force origin develop

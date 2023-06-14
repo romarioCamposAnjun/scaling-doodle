@@ -1,21 +1,38 @@
-name: dev-deploy
+name: Rollback on Develop
 
 on:
   push:
-    branches: [develop]
-jobs:
-  dev-deploy:
-    runs-on: [self-hosted, dev, doc-issuer-dev]
-    environment: development
-    strategy:
-      matrix:
-        node-version: [lts/*]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+    branches:
+      - develop
+  workflow_dispatch:
+    inputs:
+      commit_hash:
+        description: 'Número do hash do commit'
+        required: true
 
-      - name: start or reload server
-        run: npm run start_dev
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+
+      - name: Rollback
+        run: |
+          # Obtém o número do hash do commit fornecido
+          COMMIT_HASH=${{ github.event.inputs.commit_hash }}
+
+          # Configura o token de acesso pessoal
+          TOKEN=${{ secrets.ACCESS_TOKEN }}
+
+          # Reverte para o commit especificado usando git reset
+          git reset --hard $COMMIT_HASH
+
+          # Empurra as alterações revertidas
+          git push --force origin develop
+
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
